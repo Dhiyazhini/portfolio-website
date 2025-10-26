@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DHIYAZHINI M S — Portfolio</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#3b82f6}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg),#071024);color:#e6eef6;line-height:1.45}
+    .container{max-width:980px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:flex-start;gap:20px;}
+    .avatar{width:140px;height:140px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+    h1{margin:0;font-size:28px}
+    .avatar img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+    p.lead{color:var(--muted);margin-top:6px}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:24px}
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .projects{display:flex;flex-direction:column;gap:14px}
+    .proj{display:flex;gap:12px;align-items:center}
+    .proj img{width:120px;height:auto;object-fit:cover;object-position: center; border-radius:8px;background:#081324}
+    .meta{color:var(--muted);font-size:13px}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    a.cta{display:inline-block;background:var(--accent);color:#04293a;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:8px}
+    .small{font-size:13px;color:var(--muted)}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:72px;height:72px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="Photo.jpg" alt="">
+      </div>
+      <div>
+        <h1>DHIYAZHINI MOUROUGAYANE</h1>
+        <div class="small">B.Tech Mechanical (EV) • VIT Vellore — Batch 2024–2028 | Online B.S. Data Science and Applications, IITM (Foundational Level)</div>
+        <p class="lead">Aspiring Web-Developer & Design Intern — combining Mechanical/EV foundations with Front-End Development, 3D Visualization (Blender) and Graphic Design (Figma/Canva). Seeking internship opportunities at BMW in Design or Web Development.</p>
+        <div style="margin-top:10px">
+          <a class="cta" href="#projects">View Projects</a>
+          <a class="small" href="mailto:dhiyazhinims06@gmail.com">dhiyazhinims06@gmail.com</a>
+          <a class="small" href="https://github.com/Dhiyazhini">GitHub</a>
+          <a class="small" href="https://www.linkedin.com/in/dhiyazhini-m-62827731a/">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h3>Projects</h3>
+          <div id="projects" class="projects">
+            <article class="proj">
+              <img src="online_job_portal.png" alt="Job portal screenshot">
+              <div>
+                <strong>Online Job Portal — Python</strong>
+                <div class="meta">
+                  <ul>
+                    <li>Developed a job listing and search application using Python with a Tkinter GUI interface.</li>
+                    <li>Integrated MySQL for storing and retrieving user data (job posts, applicants, and search results).</li>
+                    <li>Implemented features for posting, viewing, and applying to jobs, and opened relevant job pages using the webbrowser module.</li>
+                  </ul>
+                </div>
+                <div class="small">Tech: Python • MySQL 
+                <a href="https://github.com/yourusername/job-portal" target="_blank">View on GitHub</a>
+                <a href="https://your-live-project-link.com" target="_blank">Live Demo</a>
+                </div>
+              </div>
+            </article>
+            <article class="proj">
+              <img src="movie_search_webapp.png" alt="Movie app screenshot">
+              <div>
+                <strong>Movie Search Web App</strong>
+                <div class="meta">
+                  <ul>
+                    <li>Created a movie application for browsing and searching movies.</li>
+                    <li>Implemented features such as movie details display and search functionality.</li>                  
+                  </ul>
+                </div>
+                <div class="small">Tech: HTML • CSS • JavaScript • </div>
+              </div>
+            </article>
+            <article class="proj">
+              <img src="3D_ChessPiece.png" alt="Blender render">
+              <div>
+                <strong>3D Model</strong>
+                <div class="meta">
+                  <ul>
+                    <li>Created basic 3D models to practice design and spatial understanding.</li>
+                  </ul>
+                </div>
+                <div class="small">Software: Blender</div>
+              </div>
+            </article>
+            <article class="proj">
+              <img src="Pixelens_finalGravitas.png" alt="Figma screenshot">
+              <div>
+                <strong>Graphic Design</strong>
+                <div class="meta">
+                  <ul>
+                    <li>Designed posters and presentations to practice layout, color, and typography.</li>
+                  </ul>
+                </div>
+                <div class="small">Software: Figma • Canva</div>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="card" style="margin-top:14px">
+          <h3>Experience & Activities</h3>
+          <p class="meta">Animation Club — Active member & volunteer. Helped organize events, contributed to visual assets and stage visuals. Strong teamwork and event logistics experience.</p>
+          <p class="meta">Coursework & Focus: Basics of EV systems, Mechanics, Introductory Data Science, Front-End Development.</p>
+        </section>
+      </main>
+      <aside>
+        <div class="card">
+          <h4>Skills</h4>
+          <div class="skills">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Python</span>
+            <span class="pill">Blender</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Canva</span>
+            <span class="pill">3D Visualization</span>
+          </div>
+        </div>
+        <div class="card" style="margin-top:14px">
+          <h4>Education</h4>
+          <div class="small">VIT Vellore — B.Tech Mechanical (EV specialization), 2024–2028</div>
+          <div class="small">IIT Madras — Online B.S. Data Science & Applications (Foundational Level)</div>
+        </div>
+        <div class="card" style="margin-top:14px">
+          <h4>Contact</h4>
+          <p class="small">Email: dhiyazhinims06@gmail.com<br/>Location: Chennai, India.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
