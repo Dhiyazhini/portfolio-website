@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhiyazhini Mourougayane — Engineer, builder, designer</title>
+<meta name="description" content="Mechanical (EV) engineering student at VIT Vellore building control systems, thermal simulations, robots and web apps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A1230;--panel:#111C45;--panel2:#16245A;--ink:#EAF0FF;--muted:#9AA8D0;--line:#26356F;--amber:#FFC857;--blue:#6EA8FF;
+ --sans:"Sora","Segoe UI",Arial,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--amber)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;line-height:1.1}
+h2{font-family:var(--mono);font-weight:600;font-size:1.5rem;margin-bottom:28px;color:var(--ink)}
+h2 span{color:var(--amber)}
+section{padding:88px 0 0}
+h2[id]{scroll-margin-top:96px}
+nav{position:sticky;top:0;z-index:5;background:#0A1230EE;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+nav b{font-family:var(--mono);font-weight:600}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+nav a:hover{color:var(--ink)}
+.gm{font-family:var(--mono);font-size:.82rem;border:1px solid var(--amber);color:var(--amber);background:transparent;border-radius:99px;padding:6px 14px;cursor:pointer}
+.gm:hover{background:var(--amber);color:var(--bg)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:center;padding-top:56px}
+.portrait{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;aspect-ratio:1/1.1}
+.portrait canvas{width:100%;height:100%;display:block}
+.portrait small{position:absolute;left:12px;bottom:10px;font:400 .72rem var(--mono);color:var(--muted)}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:48ch;margin:22px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--amber);color:var(--amber)}
+.btn.fill{background:var(--amber);color:var(--bg)}
+.btn:hover{filter:brightness(1.1)}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;font:400 .82rem var(--mono);color:var(--muted)}
+.facts span{border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+/* about */
+.about{max-width:68ch;color:var(--muted);font-size:1.08rem}
+.about b{color:var(--ink);font-weight:600}
+/* engineering */
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:12px 40px;padding:28px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1.25rem;font-weight:600}
+.row .meta{font:400 .85rem var(--mono);color:var(--blue);margin-top:8px}
+.row ul{margin:0;padding-left:18px;color:var(--muted)}
+.row li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{font:400 .75rem var(--mono);padding:2px 9px;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.proj img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--panel2)}
+.proj .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.proj h3{font-size:1.05rem;font-weight:600}
+.proj p{margin:0;color:var(--muted);font-size:.92rem}
+.links{margin-top:auto;padding-top:8px;display:flex;gap:16px;font-weight:600;font-size:.92rem;flex-wrap:wrap}
+/* game */
+.game{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.game canvas{display:block;width:100%;height:360px;touch-action:none;cursor:pointer;background:#0C1640}
+.hud{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--line);font:400 .85rem var(--mono);color:var(--muted)}
+.hud b{color:var(--amber);font-weight:600}
+.hud button{font:inherit;color:var(--ink);background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+.hud button[aria-pressed="true"]{background:var(--amber);color:var(--bg);border-color:var(--amber)}
+.note{color:var(--muted);max-width:66ch;margin:0 0 20px}
+/* exp */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.xp{margin-bottom:20px}.xp h3{font-size:1.05rem;font-weight:600}.xp p{margin:4px 0 0;color:var(--muted)}
+dl{margin:0}dt{font-weight:600;margin-top:14px}dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:96px;padding:40px 0 48px;border-top:1px solid var(--line);color:var(--muted)}
+footer .big{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;color:var(--ink);letter-spacing:-.02em;margin-bottom:14px}
+@media (max-width:780px){nav .wrap{padding-top:10px;padding-bottom:10px;gap:8px 16px}nav ul{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:18px;padding-bottom:2px}nav ul a{white-space:nowrap}h2[id]{scroll-margin-top:130px}.hero,.two,.row{grid-template-columns:1fr}.portrait{max-width:360px}section{padding-top:64px}.game canvas{height:300px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+  <b>dhiyazhini.ms</b>
+  <ul><li><a href="#about">about</a></li><li><a href="#engineering">engineering</a></li><li><a href="#software">software</a></li><li><a href="#experience">experience</a></li><li><a href="#contact">contact</a></li></ul>
+  <button class="gm" id="gmBtn" type="button">game mode</button>
+</div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <div class="portrait"><canvas id="ascii" role="img" aria-label="ASCII-art SCARA robot arm that reaches toward your cursor and grips when you click"></canvas><small id="read">move your cursor over me</small></div>
+  <div>
+    <h1>hi, I’m Dhiyazhini.</h1>
+    <p>I’m a mechanical (EV) engineering student who writes code. I tune controllers, simulate cooling systems, design robots, and build web apps that people can actually click.</p>
+    <div class="btns">
+      <a class="btn fill" href="#engineering">See my work</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+    <div class="facts"><span>VIT Vellore ’28</span><span>CGPA 9.07</span><span>Chennai</span></div>
+  </div>
+</header>
+
+<section>
+  <h2 id="about"><span>/</span> about me</h2>
+  <p class="about">I’m a third-year student at <b>VIT Vellore</b> studying Mechanical Engineering with an Electric Vehicles specialization, and I’m also working through the <b>IIT Madras online B.S. in Data Science</b>. I like the place where hardware meets software: a feedback loop is a few lines of code and a very real ball in the air. I’m looking for internships where I can build things, from EV systems and automation to front-end and web work.</p>
+</section>
+
+<section>
+  <h2 id="engineering"><span>/</span> engineering</h2>
+  <div class="rows">
+    <!-- Add a Simulink plot or CAD image by placing an <img> inside any row's first div. -->
+    <article class="row">
+      <div><h3>Magnetic levitation control (Quanser MAGLEV)</h3><div class="meta">MATLAB, Simulink</div>
+        <div class="tags"><span class="tag">pole placement</span><span class="tag">PI/PID</span><span class="tag">feed-forward</span></div></div>
+      <ul><li>Modelled an unstable single-axis levitation plant.</li><li>Designed a cascaded PI/PID controller with feed-forward using pole placement, and verified it on a non-linear Simulink simulation.</li><li>Want to feel the problem? Try <a href="#game">game mode</a> below.</li></ul>
+    </article>
+    <article class="row">
+      <div><h3>Peltier vaccine carrier with PCM buffer</h3><div class="meta">Python</div>
+        <div class="tags"><span class="tag">thermal simulation</span><span class="tag">phase change materials</span></div></div>
+      <ul><li>Designed a portable thermoelectric carrier to hold vaccines at 2–8 °C without ice packs.</li><li>Built a Python simulation of cooling performance, power draw and holdover during a power failure.</li></ul>
+    </article>
+    <article class="row">
+      <div><h3>SCARA robot for CNC loading and unloading</h3><div class="meta">L&amp;T EduTech project, scored 28/30</div>
+        <div class="tags"><span class="tag">kinematics</span><span class="tag">end-effector</span><span class="tag">drive selection</span></div></div>
+      <ul><li>Designed a 4-DOF machine-tending robot covering kinematic modelling, end-effector design and drive selection.</li></ul>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2 id="software"><span>/</span> software and design</h2>
+  <div class="grid">
+    <article class="proj"><img src="projects/movie-app/movie_search_webapp.png" alt="Movie Search Web App" loading="lazy"><div class="body">
+      <h3>Movie Search Web App</h3><p>Browse and search movies as poster cards, with a details view for each title.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      <div class="links"><a href="projects/movie-app/">open app</a><a href="https://github.com/Dhiyazhini">code</a></div></div></article>
+    <article class="proj"><img src="projects/online-job-portal/online_job_portal.png" alt="Online Job Portal" loading="lazy"><div class="body">
+      <h3>Online Job Portal</h3><p>Desktop app with signup, login, job posting, search and applying, backed by MySQL.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">MySQL</span></div>
+      <div class="links"><a href="projects/online-job-portal/Online_Job_Portal_Output.pdf">see output</a><a href="https://github.com/Dhiyazhini">code</a></div></div></article>
+    <article class="proj"><img src="projects/3d-model/3D-chesspiece-king.png" alt="Blender render of a chess king" loading="lazy"><div class="body">
+      <h3>3D modelling in Blender</h3><p>A modelled chess piece and an animated basketball-hoop scene.</p>
+      <div class="tags"><span class="tag">Blender</span></div>
+      <div class="links"><a href="projects/3d-model/basketball_animation.mp4">watch animation</a></div></div></article>
+    <article class="proj"><img src="projects/graphic-design/Pixelens_finalGravitas.png" alt="graVITas workshop poster" loading="lazy"><div class="body">
+      <h3>Posters and graphics</h3><p>Event posters, including one for the graVITas 2025 Blender workshop.</p>
+      <div class="tags"><span class="tag">Figma</span><span class="tag">Canva</span></div>
+      <div class="links"><a href="projects/graphic-design/graphic-design-display.pdf">see designs</a></div></div></article>
+  </div>
+</section>
+
+<section>
+  <h2 id="game"><span>/</span> game mode: keep it floating</h2>
+  <p class="note">A magnet can only pull up, and gravity never stops. Hold the screen, click or press space to energize the magnet and keep the ball inside the amber band. Stuck? Switch on the autopilot to watch a feedback controller do it.</p>
+  <div class="game">
+    <canvas id="g" tabindex="0" role="img" aria-label="Levitation game: hold space or click to lift the ball into the band"></canvas>
+    <div class="hud"><span>in band: <b id="sc">0.0</b>s</span><span>best: <b id="bs">0.0</b>s</span>
+      <button id="ap" type="button" aria-pressed="false">autopilot: off</button></div>
+  </div>
+</section>
+
+<section>
+  <div class="two">
+    <div>
+      <h2 id="experience"><span>/</span> experience</h2>
+      <div class="xp"><h3>graVITas Tech Fest, VIT Vellore</h3><p>Animation team. Contributed visual assets and stage visuals.</p></div>
+      <div class="xp"><h3>Riviera Cultural Fest, VIT Vellore</h3><p>Infusion team. In charge of handling and coordinating foreign students.</p></div>
+      <h2 style="margin-top:40px"><span>/</span> education</h2>
+      <div class="xp"><h3>VIT Vellore, 2024–2028</h3><p>B.Tech Mechanical Engineering (Electric Vehicles). CGPA 9.09 in year 1, 9.07 in year 2.</p></div>
+      <div class="xp"><h3>IIT Madras (online)</h3><p>B.S. in Data Science and Applications, foundational level.</p></div>
+    </div>
+    <div>
+      <h2><span>/</span> skills</h2>
+      <dl>
+        <dt>Engineering</dt><dd>MATLAB, Simulink, PI/PID and pole placement, kinematic modelling, thermal simulation</dd>
+        <dt>Programming and web</dt><dd>Python, MySQL, HTML, CSS, JavaScript</dd>
+        <dt>Design and 3D</dt><dd>Blender, Figma, Canva</dd>
+        <dt>Certifications</dt><dd>Collaborative Robotics in Manufacturing, L&amp;T EduTech (June 2026). Generative AI Fluency, FutureSkills Prime (October 2026).</dd>
+        <dt>Languages</dt><dd>English, Tamil, Hindi, Korean</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <div class="big">Got an internship? Let’s build something.</div>
+  <p><a href="mailto:dhiyazhinims06@gmail.com">dhiyazhinims06@gmail.com</a> · <a href="https://github.com/Dhiyazhini">GitHub</a> · <a href="https://www.linkedin.com/in/dhiyazhini-m-62827731a/">LinkedIn</a> · Chennai, India</p>
+</div></footer>
+
+<script>
+/* ASCII SCARA arm that follows the cursor */
+(function(){
+  var c=document.getElementById('ascii'),x=c.getContext('2d'),rd=document.getElementById('read'),
+  COLS=60,ROWS=34,W,H,cw,ch,bx,by,L1,L2,tx=null,ty=null,t1=-1.2,t2=1.6,grip=false,
+  reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,t0=performance.now(),g;
+  var INK='#EAF0FF',AMB='#FFC857',MUT='rgba(154,168,208,.45)',BLU='#6EA8FF';
+  function fit(){var d=devicePixelRatio||1;W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+    cw=W/COLS;ch=H/ROWS;bx=W/2;by=H*.84;L1=W*.27;L2=W*.23;draw(performance.now())}
+  function goal(now){if(tx!==null)return[tx,ty];var s=(now-t0)/1000;return[bx+Math.cos(s*.7)*L1*1.15,by-L1*.95-Math.sin(s*.9)*L2*.6]}
+  function ik(px,py){var dx=px-bx,dy=py-by,k=Math.atan2(dy,dx),d=Math.hypot(dx,dy);
+    d=Math.min(L1+L2-1,Math.max(Math.abs(L1-L2)+1,d));
+    var c2=Math.max(-1,Math.min(1,(d*d-L1*L1-L2*L2)/(2*L1*L2))),a2=Math.acos(c2);
+    return[k-Math.atan2(L2*Math.sin(a2),L1+L2*Math.cos(a2)),a2]}
+  function wrap(a){return((a+Math.PI)%(2*Math.PI)+2*Math.PI)%(2*Math.PI)-Math.PI}
+  function put(px,py,chr,col){var cl=Math.floor(px/cw),r=Math.floor(py/ch);if(cl<0||cl>=COLS||r<0||r>=ROWS)return;g[r*COLS+cl]=[chr,col]}
+  function line(x0,y0,x1,y1,col){var dx=x1-x0,dy=y1-y0,n=Math.ceil(Math.hypot(dx,dy)/(Math.min(cw,ch)*.6)),chr;
+    if(Math.abs(dy)<.38*Math.abs(dx))chr='=';else if(Math.abs(dx)<.38*Math.abs(dy))chr='|';else chr=(dx*dy>0)?'\\':'/';
+    for(var i=0;i<=n;i++)put(x0+dx*i/n,y0+dy*i/n,chr,col)}
+  function deg(a){return Math.round(a*180/Math.PI)}
+  function draw(now){
+    var p=goal(now),a=ik(p[0],p[1]),f=reduce?1:.16;
+    t1+=wrap(a[0]-t1)*f;t2+=(a[1]-t2)*f;
+    var ex=bx+L1*Math.cos(t1),ey=by+L1*Math.sin(t1),ph=t1+t2,wx=ex+L2*Math.cos(ph),wy=ey+L2*Math.sin(ph);
+    g={};
+    for(var q=-Math.PI;q<=0;q+=.035)put(bx+(L1+L2)*Math.cos(q),by+(L1+L2)*Math.sin(q),'.',MUT);
+    for(var cc=0;cc<COLS;cc++)put(cc*cw+1,by+ch*1.7,'_',MUT);
+    put(bx-2*cw,by+ch,'/',INK);put(bx-cw,by+ch,'#',INK);put(bx,by+ch,'#',INK);put(bx+cw,by+ch,'#',INK);put(bx+2*cw,by+ch,'\\',INK);
+    if(tx!==null)put(tx,ty,'+',BLU);
+    line(bx,by,ex,ey,INK);line(ex,ey,wx,wy,INK);
+    put(bx,by,'@',AMB);put(ex,ey,'O',AMB);put(wx,wy,'o',AMB);
+    var tipx=wx+Math.cos(ph)*ch*1.5,tipy=wy+Math.sin(ph)*ch*1.5,gap=(grip?.55:1.5)*cw,px=-Math.sin(ph),py=Math.cos(ph);
+    put(tipx+px*gap,tipy+py*gap,'[',AMB);put(tipx-px*gap,tipy-py*gap,']',AMB);
+    x.clearRect(0,0,W,H);x.font=Math.min(cw*1.75,ch*.98)+'px "JetBrains Mono",monospace';x.textBaseline='top';
+    for(var k in g){var r=Math.floor(k/COLS),cl=k%COLS;x.fillStyle=g[k][1];x.fillText(g[k][0],cl*cw,r*ch)}
+    rd.textContent='θ1 '+deg(t1)+'°  θ2 '+deg(t2)+'°  ·  click to grip';
+  }
+  function loop(now){draw(now);requestAnimationFrame(loop)}
+  c.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect();tx=e.clientX-b.left;ty=e.clientY-b.top;if(reduce)draw(performance.now())});
+  c.addEventListener('pointerleave',function(){tx=null;if(reduce)draw(performance.now())});
+  c.addEventListener('pointerdown',function(){grip=true;if(reduce)draw(performance.now())});
+  addEventListener('pointerup',function(){grip=false;if(reduce)draw(performance.now())});
+  addEventListener('resize',fit);
+  fit();if(!reduce)requestAnimationFrame(loop);
+})();
+
+/* levitation game */
+(function(){
+  var c=document.getElementById('g'),x=c.getContext('2d'),sc=document.getElementById('sc'),bs=document.getElementById('bs'),ap=document.getElementById('ap');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,W,H,y,v,hold=false,auto=false,t=0,best=0,bandC,bandT=0,last=performance.now();
+  function size(){var d=devicePixelRatio||1;W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+  function reset(){y=H*.7;v=0;t=0}
+  function band(){return H*(0.45+0.15*Math.sin(bandT*0.45))}
+  function on(e){hold=true;if(e&&e.preventDefault)e.preventDefault()}
+  function off(){hold=false}
+  c.addEventListener('pointerdown',on);addEventListener('pointerup',off);c.addEventListener('pointerleave',off);
+  addEventListener('keydown',function(e){if(e.code==='Space'&&document.activeElement===c){hold=true;e.preventDefault()}});
+  addEventListener('keyup',function(e){if(e.code==='Space')hold=false});
+  ap.addEventListener('click',function(){auto=!auto;ap.setAttribute('aria-pressed',auto);ap.textContent='autopilot: '+(auto?'on':'off');reset()});
+  function frame(now){
+    var dt=Math.min(.033,(now-last)/1000);last=now;bandT+=dt;bandC=band();
+    var u=hold?1:0;
+    if(auto){var e=bandC-y;u=Math.max(0,Math.min(1,.53+(-e*.012)+(v*.03)))} /* PD: pull harder when below, ease off when rising */
+    var a=900-1700*u; /* gravity pulls down, magnet pulls up */
+    v+=a*dt;v*=.992;y+=v*dt;
+    if(y<28){y=28;v=Math.max(0,v)} if(y>H-20){y=H-20;v=0}
+    var inB=Math.abs(y-bandC)<26;
+    if(inB){t+=dt;if(t>best){best=t}}else{t=Math.max(0,t-dt*2)}
+    sc.textContent=t.toFixed(1);bs.textContent=best.toFixed(1);
+    x.clearRect(0,0,W,H);
+    x.fillStyle='rgba(255,200,87,.14)';x.fillRect(0,bandC-26,W,52);x.strokeStyle='rgba(255,200,87,.5)';x.beginPath();x.moveTo(0,bandC-26);x.lineTo(W,bandC-26);x.moveTo(0,bandC+26);x.lineTo(W,bandC+26);x.stroke();
+    x.fillStyle='#FFC857';x.fillRect(W/2-50,10,100,18);
+    x.strokeStyle='rgba(110,168,255,'+(0.15+0.6*(hold||auto?1:0))+')';x.lineWidth=2;x.setLineDash([5,6]);x.beginPath();x.moveTo(W/2,28);x.lineTo(W/2,y-14);x.stroke();x.setLineDash([]);
+    x.fillStyle=inB?'#FFC857':'#EAF0FF';x.beginPath();x.arc(W/2,y,14,0,6.2832);x.fill();
+    requestAnimationFrame(frame);
+  }
+  addEventListener('resize',function(){size();reset()});
+  size();reset();
+  if(reduce){ap.click();}
+  requestAnimationFrame(frame);
+  document.getElementById('gmBtn').addEventListener('click',function(){document.getElementById('game').scrollIntoView({behavior:reduce?'auto':'smooth'});c.focus({preventScroll:true})});
+})();
+</script>
+</body>
+</html>
